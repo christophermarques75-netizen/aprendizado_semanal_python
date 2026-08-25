@@ -1,15 +1,34 @@
-from tkinter import *
-from tkinter import ttk
-import time
+import tkinter as tk
 from auxiliar_de_autenticação import *
-root = Tk()
-frm = ttk.Frame(root, padding=10)
+from tkinter import font
 
-frm.grid()
+janela = tk.Tk()
+janela.title("automatização do chris")
+##acima cria a janela
+janela.geometry("900x500")
+##tamanho da janela
 
-ttk.Label(frm, text="boa tarde meu lindo bora pra mais um dia").grid(column=0, row=0)
+fonte_em_negrito = font.Font(family="arial", size=12, weight="bold")
+##fonte pra desenvolvimento futuro
 
-ttk.Button(frm, text="abrir o vs com a pasta do git particular",command= lambda: automatizar_001()).grid(column=0, row=1)
-ttk.Button(frm, text="abrir o vs com a pasta do projeto integrador", command= lambda: automatizar_002()).grid(column=0, row=2)
+janela.config(bg="#1e1e1e")
 
-root.mainloop()
+separador0 = tk.Label(janela,bg="#1e1e1e", fg="white", text="--------------------------------------------------------")
+separador0.pack()
+#
+botao1 = tk.Button(janela,  text="Repositório do GitHub", font=fonte_em_negrito, bg="black",  fg="white", command=automatizar_001)
+
+botao1.pack()
+
+##localização do botão e o que é o botão e o comando dele
+separador1 = tk.Label(janela,bg="#1e1e1e", fg="white", text="--------------------------------------------------------")
+separador1.pack()
+##separador por estilização
+
+botao2 = tk.Button(janela, text="Pasta do Projeto Para o TCC", font=fonte_em_negrito, bg="black", fg="white", command=automatizar_002)
+botao2.pack()
+
+separador2 = tk.Label(janela,bg="#1e1e1e", fg="white", text="--------------------------------------------------------")
+separador2.pack()
+
+janela.mainloop()
