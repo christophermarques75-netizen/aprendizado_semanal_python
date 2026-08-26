@@ -33,5 +33,5 @@ def automatizar_o_salafuturo():
     pyautogui.press("tab")
     pyautogui.write("seu digito")
     pyautogui.press("tab", presses=2)
-    pyautogui.write("s")
+    pyautogui.write("sua senha")
     pyautogui.press("enter")
