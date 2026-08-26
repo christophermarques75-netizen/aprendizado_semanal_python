@@ -31,4 +31,7 @@ botao2.pack()
 separador2 = tk.Label(janela,bg="#1e1e1e", fg="white", text="--------------------------------------------------------")
 separador2.pack()
 
+botao3 = tk.Button(janela, text="automatizar o sala do futuro", bg="black", fg="white", font=fonte_em_negrito, command=automatizar_o_salafuturo)
+botao3.pack()
+
 janela.mainloop()
