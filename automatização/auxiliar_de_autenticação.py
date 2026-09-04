@@ -3,27 +3,21 @@ import time
 import keyboard
 import sys
 from webbrowser import open
+import subprocess
 
 def automatizar_001():
-    if keyboard.is_pressed("j"):
-        sys.exit()
-    pyautogui.hotkey("win", "r")
-    time.sleep(1)
-    pyautogui.press('backspace')
-    pyautogui.write(r"code C:\Users\CHRISTOPHERGABRIELMA\Desktop\tudo\pyautogui")
-    time.sleep(1)
-    pyautogui.press("enter")
-
+    caminho = r"C:\Users\CHRISTOPHERGABRIELMA\Desktop\tudo\pyautogui"
+    subprocess.run(["code", caminho], shell=True)
 
 def automatizar_002():
-    if keyboard.is_pressed("j"):
-        sys.exit()
-    pyautogui.hotkey("win", "r")
-    time.sleep(2)
-    pyautogui.press('backspace')
-    pyautogui.write(r"code C:\Users\CHRISTOPHERGABRIELMA\Desktop\tudo\hora de codar")
-    time.sleep(1)
-    pyautogui.press("enter")
+    caminho = r"C:\Users\CHRISTOPHERGABRIELMA\Desktop\tudo\pasta_do_pi"
+    subprocess.run(["code", caminho], shell=True)
+
+
+def automatizar_003():
+    caminho = r"C:\Users\CHRISTOPHERGABRIELMA\Documents\versionamento\terceiro bimestre"
+    subprocess.run(["code", caminho], shell=True)
+
 
 def automatizar_o_salafuturo():
     open("https://saladofuturo.educacao.sp.gov.br/login-alunos")
