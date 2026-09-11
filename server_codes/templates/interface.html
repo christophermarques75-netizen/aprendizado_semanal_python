@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Enviar JSON</title>
+  </head>
+  <body>
+        <h1>pedra, papel ou tesoura</h1>
+
+        <form method="POST">
+            <label>digite sua jogada (Pedra, papel, tesoura):</label>
+            <input type="text" , name="jogada" requered>
+            <button type="submit">faça sua jogada</button>
+        </form>
+        {% if resultado %}
+            <h3>{{resultado}}</h3>
+        {% endif %}
+  </body>
+</html>
